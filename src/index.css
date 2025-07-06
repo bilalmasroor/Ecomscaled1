@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Apply Poppins font to the entire website */
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.aboutHero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .aboutHero {
+    background-image: url("./assets/images/aboutHero.png"); /* ✅ Desktop */
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutHero {
+    background-image: url("./assets/images/aboutBannerMobile.jpeg"); /* ✅ Mobile */
+  }
+}
+
+.background {
+  background: url("./assets/images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@keyframes growWave {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.wave-grow {
+  animation: growWave 3s ease-out forwards;
+}
+
+.wave-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ✅ Only apply highlight/dim effect on xl and above */
+@media (min-width: 1280px) {
+  .card-step {
+    opacity: 0.5;
+    transform: scale(1);
+    transition: all 0.5s ease;
+  }
+
+  .card-step.active {
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 1;
+  }
+}
