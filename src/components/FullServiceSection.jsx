@@ -45,7 +45,7 @@ const FullServiceSection = () => {
             <button
               key={heading}
               onClick={() => setActive(heading)}
-              className={`px-4 py-2 rounded-full text-sm md:text-base lg:text-lg 2xl:text-xl cursor-pointer font-semibold font-['Roboto'] transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm md:text-base lg:text-lg 2xl:text-xl cursor-pointer font-semibold font-['Roboto'] transition-all duration-300 ${
                 active === heading
                   ? "text-[#0065B1] underline"
                   : "text-gray-900"
